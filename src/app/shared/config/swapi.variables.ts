@@ -1,4 +1,4 @@
-const SWAPI_URL = 'http://swapi.co/api';
+const SWAPI_URL = 'https://swapi.co/api';
 
 /**
  * Generate all the urls for the star wars api
