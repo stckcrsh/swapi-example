@@ -1,0 +1,20 @@
+@import 'variables';
+$c-navigation-height: 36px;
+.c-navigation {
+	background-color: $color-secondary;
+	color: $color-fourth;
+	height: $c-navigation-height;
+	line-height: $c-navigation-height;
+	.c-navigation__item {
+		margin-right: 0px;
+		padding-right: 8px;
+		padding-left: 8px;
+		position: relative;
+		a {
+			display: block;
+		}
+		&:hover {
+			background-color: $color-secondary-alt;
+		}
+	}
+}

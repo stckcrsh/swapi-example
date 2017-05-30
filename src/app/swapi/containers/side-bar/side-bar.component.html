@@ -1,0 +1,28 @@
+<div class="o-grid o-container">
+	<div class="o-grid__col u-2/2">
+		<h3>Favorite Character</h3>
+		<sw-people-small-detail *ngIf="favoriteChar$ | async; else noFavChar; let favorite" [person]="favorite">
+		</sw-people-small-detail>
+	</div>
+	<div class="o-grid__col u-2/2">
+		<h3>Worst Character</h3>
+		<sw-people-small-detail *ngIf="worstChar$ | async; else noWorstChar; let favorite" [person]="favorite">
+		</sw-people-small-detail>
+	</div>
+	<div class="o-grid__col u-2/2">
+		<h3>Crawl Word Counts</h3>
+		<sw-crawl-chart [data]="crawlChart$ | async"></sw-crawl-chart>
+	</div>
+</div>
+<ng-template #noFavChar>
+	No Character selected
+</ng-template>
+<ng-template #noWorstChar>
+	No Character selected
+	<select [formControl]="worstSelect">
+		<option>- Select -</option>
+		<ng-template ngFor let-character [ngForOf]="characters$ | async">
+			<option [ngValue]="character">{{character.name}}</option>
+		</ng-template>
+	</select>
+</ng-template>

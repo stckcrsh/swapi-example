@@ -1,0 +1,14 @@
+<div class="o-grid">
+	<img [src]="film.posterPath" />
+	<div class="o-grid__col">
+		<h3>{{film.swapi.title}}</h3>
+	</div>
+	<div>
+		Director: {{film.swapi.director}}
+		<ul class="o-list">
+			<li
+				class="o-list__item" 
+				*ngFor="let character of filterSelectCharacters(film.swapi.characters||[])">{{character.name}}</li>
+		</ul>
+	</div>
+</div>

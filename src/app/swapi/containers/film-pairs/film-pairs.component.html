@@ -1,0 +1,5 @@
+<div class="o-grid o-container">
+	<div class="o-grid__col u-1/3 o-grid o-grid--equal-height o-container" *ngFor="let pair of filmPairs">
+		<sw-film-card class="o-grid__col u-1/2" *ngFor="let film of pair" [film]="film"></sw-film-card>
+	</div>
+</div>
