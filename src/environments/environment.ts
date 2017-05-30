@@ -6,13 +6,15 @@ import { NgModule } from '@angular/core';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 export const environment = {
-  production: false
+	production: false
 };
 
 @NgModule({
-  imports: [
-    StoreDevtoolsModule.instrumentOnlyWithExtension()
-  ],
-  exports: []
+	imports: [
+		StoreDevtoolsModule.instrumentOnlyWithExtension()
+	],
+	exports: [
+		StoreDevtoolsModule
+	]
 })
 export class EnvironmentModule {}

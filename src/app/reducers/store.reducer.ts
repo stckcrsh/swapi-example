@@ -25,7 +25,7 @@ const builtReducer: ActionReducer < IAppState > = compose(
 	localStorageSync({
 		keys: [
 			'ui',
-			'film',
+			'films',
 			'people'
 		],
 		rehydrate: true

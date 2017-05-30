@@ -7,7 +7,7 @@
 /**
  * A species within the Star Wars universe
  */
-export interface People {
+export interface Species {
   /**
    * The average height of this person in centimeters.
    */
