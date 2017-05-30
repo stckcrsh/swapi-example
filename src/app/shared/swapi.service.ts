@@ -22,7 +22,11 @@ export class SwapiService {
 	}
 
 	public getResourceByURL < T > (url: string): Observable < T > {
-		return this.http.get(url).map(res => < T > res.json());
+		return this.http.get(this.convertUrlToHttps(url)).map(res => < T > res.json());
+	}
+
+	public convertUrlToHttps(url: string) {
+		return url.replace(/http(?!s)/, 'https');
 	}
 
 }
